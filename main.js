@@ -1,3 +1,4 @@
+/*---CATCHING THE DOM---*/
 var ac = document.getElementById('btnAC');
 var equal = document.getElementById('btnEQ');
 var box1 = document.getElementById('result-text');
@@ -16,8 +17,9 @@ var divis = 0;
 var operator = "";
 
 
-ac.addEventListener("click", clear);
+ac.addEventListener("click", clear);  //assign function to CLEAR ALL button
 
+/*---Function to assign numbers to variable after clicking on virtual keyboard---*/
 function addNumb(clicked_id){
   if (plus == 1 || minus == 1 || times == 1 || divis == 1){
     partial1 += clicked_id.slice(-1);
@@ -28,6 +30,7 @@ function addNumb(clicked_id){
   }
 }
 
+/*---Function to clear all fields---*/
 function clear(){
   box1.innerHTML = "";
   opBox.innerHTML = "";
@@ -42,6 +45,7 @@ function clear(){
   divis = 0;
 }
 
+/*---Function to display all numbers and operators---*/
 function showRes(){
   if (partial == undefined){
     box1.innerHTML = "";
@@ -58,6 +62,7 @@ function showRes(){
   opBox.innerHTML = operator;
 }
 
+/*---Function to add two numbers---*/
 function add(){
   plus = 1;
   minus = 0;
@@ -66,6 +71,7 @@ function add(){
   operator = "+"
   resBox.innerHTML = "";
 }
+/*---Function to subtract two numbers---*/
 function sott(){
   plus = 0;
   minus = 1;
@@ -74,6 +80,7 @@ function sott(){
   operator = "-"
   resBox.innerHTML = "";
 }
+/*---Function to multiply two numbers---*/
 function mult(){
   plus = 0;
   minus = 0;
@@ -82,6 +89,7 @@ function mult(){
   operator = "×"
   resBox.innerHTML = "";
 }
+/*---Function to divide two numbers---*/
 function divi(){
   plus = 0;
   minus = 0;
@@ -91,6 +99,7 @@ function divi(){
   resBox.innerHTML = "";
 }
 
+/*---Function to show the result---*/
 function finalRes(){
   if (plus == 1){
     result = parseFloat(partial) + parseFloat(partial1);
