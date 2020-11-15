@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Calcolatrice</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">  <!--link to style.css-->
 
 </head>
 <body>
@@ -14,19 +14,19 @@
 
   <div class="main__container">
     <div class="calculator">
-      <div class="screen">
-        <span id="result-text"></span>
-        <span id="operator"></span>
-        <span id="result-text1"></span>
-        <span id="final-text"></span>
+      <div class="screen">  <!--div where numbers are printed-->
+        <span id="result-text"></span>  <!--first number display-->
+        <span id="operator"></span> <!--operator display-->
+        <span id="result-text1"></span> <!--second number display-->
+        <span id="final-text"></span> <!--result display-->
       </div>
-      <div class="operators">
-        <button id="plusOp" onclick="add()">+</button>
-        <button id="minusOp" onclick="sott()">-</button>
-        <button id="timesOp" onclick="mult()">×</button>
-        <button id="divisOp" onclick="divi()">÷</button>
+      <div class="operators"> <!--div where operators buttons are contained-->
+        <button id="plusOp" onclick="add()">+</button>  <!--PLUS operator button-->
+        <button id="minusOp" onclick="sott()">-</button>  <!--MINUS operator button-->
+        <button id="timesOp" onclick="mult()">×</button>  <!--TIMES operator button-->  
+        <button id="divisOp" onclick="divi()">÷</button>  <!--DIVISION operator button-->
       </div>
-      <div class="keyboard">
+      <div class="keyboard">  <!--div where keyboard with numbers is contained-->
         <button class="item grid-item1 noselect" id="btn1" value="ciao" onclick="addNumb(this.id)">1</button>
         <button class="item grid-item2 noselect" id="btn2" value=2 onclick="addNumb(this.id)">2</button>
         <button class="item grid-item3 noselect" id="btn3" value=3 onclick="addNumb(this.id)">3</button>
@@ -36,15 +36,15 @@
         <button class="item grid-item7 noselect" id="btn7" value=7 onclick="addNumb(this.id)">7</button>
         <button class="item grid-item8 noselect" id="btn8" value=8 onclick="addNumb(this.id)">8</button>
         <button class="item grid-item9 noselect" id="btn9" value=9 onclick="addNumb(this.id)">9</button>
-        <button class="item grid-item10 noselect" id="btnAC">AC</button>
+        <button class="item grid-item10 noselect" id="btnAC">AC</button>  <!--CLEAR ALL button-->
         <button class="item grid-item11 noselect" id="btn0" value=0 onclick="addNumb(this.id)">0</button>
-        <button class="item grid-item12 noselect" id="btnEQ" onclick="finalRes()">=</button>
+        <button class="item grid-item12 noselect" id="btnEQ" onclick="finalRes()">=</button>  <!--RESULT display button-->
       </div>
     </div>
   </div>
 
   <p id="footer">by <a href="http://andrea-artuso.rf.gd/">Andrea Artuso</a></p>
 
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="main.js"></script>  <!--custom JS script-->
 </body>
 </html>
